@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<h1>📚 最新文章</h1>
+
+<ul>
+  {% for post in paginator.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      <span>{{ post.date | date: "%Y-%m-%d" }}</span>
+    </li>
+  {% endfor %}
+</ul>
+
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}">上一页</a>
+  {% endif %}
+
+  <span>第 {{ paginator.page }} 页 / 共 {{ paginator.total_pages }} 页</span>
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}">下一页</a>
+  {% endif %}
+</div>
+

@@ -1,0 +1,12 @@
+
+title: 我的博客
+description: 我的技术博客
+baseurl: "" # 如果是根域名，baseurl 为空
+url: "https://github.com/qyl529895353/coding.github.io/"
+paginate: 5  # 每页展示 5 篇文章
+paginate_path: "/page:num"  # 分页路径
+
+theme: minima  # 默认使用 jekyll 的 minima 主题
+plugins:
+  - jekyll-paginate # 启用分页插件
+
